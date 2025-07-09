@@ -45,4 +45,4 @@ def send_data():
 if __name__ == "__main__":
     while True:
         send_data()
-        time.sleep(10)  # Send data every 10 seconds (adjust as needed)
+        time.sleep(1200)  # Send data every 10 seconds (adjust as needed)
