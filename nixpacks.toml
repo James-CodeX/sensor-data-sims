@@ -2,10 +2,13 @@
 providers = ["python"]
 
 [phases.install]
-cmds = ["pip install -r requirements.txt"]
+cmds = [
+  "python -m venv --copies /opt/venv",
+  ". /opt/venv/bin/activate && pip install -r requirements.txt"
+]
 
 [start]
-cmd = "python sim.py"
+cmd = ". /opt/venv/bin/activate && python sim.py"
 
 [variables]
 PYTHONUNBUFFERED = "1"
