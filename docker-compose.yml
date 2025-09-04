@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  sensor-simulator:
+    build: .
+    container_name: sensor-data-sim
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+    # Optional: Mount volume for logs
+    # volumes:
+    #   - ./logs:/app/logs
